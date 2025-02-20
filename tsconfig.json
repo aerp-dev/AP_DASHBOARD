@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "types/*": ["types/*"],
+      "pages/*": ["pages/*"],
+      "hooks/*": ["hooks/*"],
+      "store/*": ["store/*"],
+      "utils/*": ["utils/*"],
+      "assets/*": ["assets/*"],
+      "layout/*": ["layout/*"],
+      "router/*": ["router/*"],
+      "Locale/*": ["Locale/*"],
+      "helpers/*": ["helpers/*"],
+      "service/*": ["service/*"],
+      "components/*": ["components/*"]
+    },
+  },
+  "include": ["./src", "./src/declaration.d.ts"],
+  "composite": true,
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

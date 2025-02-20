@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Disable the blue clicking effect */
+button,
+button:focus,
+button:active,
+a:focus,
+a:active,
+img,
+img:focus,
+img:active,
+i,
+div {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+:root {
+  --visualColorMain: rgb(3 105 161);
+  --visualColorSecond: rgb(2 132 199);
+  --visualColorThird: rgb(7 89 133);
+  --visualColorFourth: rgb(56 189 248);
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+  scroll-margin: 100px;
+}
