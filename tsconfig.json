@@ -10,11 +10,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    "jsxImportSource": "react",
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
+    "types": ["react", "react-dom"],
     "paths": {
       "types/*": ["types/*"],
       "pages/*": ["pages/*"],

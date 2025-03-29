@@ -1,3 +1,1 @@
-export default function App() {
-  return <div>App</div>
-}
+import Providers from'Providers';export default ():React.JSX.Element=><Providers/>

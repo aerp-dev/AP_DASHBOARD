@@ -1,6 +1,7 @@
-@tailwind base;
+@import "tailwindcss";
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 /* Disable the blue clicking effect */
 button,

@@ -1,0 +1,1 @@
+import{voidFunction}from'types';export const reloadPage:voidFunction=():void=>window?.location?.reload()
