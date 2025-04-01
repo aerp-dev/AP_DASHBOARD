@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "jsxImportSource": "react",
     "resolveJsonModule": true,
     "isolatedModules": false,
@@ -32,7 +32,7 @@
       "components/*": ["components/*"]
     },
   },
-  "include": ["./src", "./src/declaration.d.ts"],
+  "include": ["./src", "./src/declaration.d.ts", "vite.config.mts"],
   "composite": true,
   "references": [{ "path": "./tsconfig.node.json" }]
 }
