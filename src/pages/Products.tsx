@@ -1,5 +1,5 @@
-import React from 'react'
-import { usePosts } from '../hooks/useApi'
+// Hooks
+import { usePosts } from 'hooks'
 
 const Products: React.FC = () => {
   const { data, isLoading, error } = usePosts()
