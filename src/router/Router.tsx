@@ -1,11 +1,10 @@
 import { Outlet, createBrowserRouter } from 'react-router-dom'
-import AERP1 from '../pages/AERP1'
+import Dashboard from '../pages/Dashboard'
 import Products from '../pages/Products'
 import Billing from '../pages/Billing'
 import ForecastAndArchive from '../pages/ForecastAndArchive'
 import NotFound from '../pages/NotFound'
 import MainLayout from 'layouts/MainLayout'
-import Home from 'pages/Home'
 import Product from 'pages/Product'
 
 const router = createBrowserRouter([
@@ -17,8 +16,7 @@ const router = createBrowserRouter([
       </MainLayout>
     ),
     children: [
-    //   { index: true, element: <AERP1 /> },
-      { index: true, element: <Home /> },
+      { index: true, element: <Dashboard /> },
       { path: 'products', element: <Product /> },
       { path: 'billing', element: <Billing /> },
       { path: 'forecast', element: <ForecastAndArchive /> },

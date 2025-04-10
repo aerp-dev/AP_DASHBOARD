@@ -1,17 +1,15 @@
 // Hooks
 import { useTypedSelector } from 'hooks'
+import Products from './Products'
 
-const AERP1: React.FC = () => {
+const Dashboard: React.FC = () => {
   const { user } = useTypedSelector((s) => s.store)
 
   return (
     <section className='max-w-7xl mx-auto mt-4'>
-      <h1 className='text-2xl font-bold'>AERP 1</h1>
-      <div className='mt-4 bg-white p-4 shadow rounded'>
-        <p className='text-gray-700'>
-          Welcome, <span className='font-semibold'>{user?.name}</span>
-        </p>
-      </div>
+      <h1 className='text-xl font-bold'>
+        Welcome, <span className='font-semibold'>{user?.name}</span>
+      </h1>
 
       {/* Example placeholder for different data sections */}
       <div className='mt-6'>
@@ -22,8 +20,10 @@ const AERP1: React.FC = () => {
           <div className='bg-yellow-100 p-4 rounded shadow'>Forecast &amp; Archive</div>
         </div>
       </div>
+
+      <Products />
     </section>
   )
 }
 
-export default AERP1
+export default Dashboard

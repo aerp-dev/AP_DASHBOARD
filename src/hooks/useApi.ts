@@ -1,4 +1,6 @@
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+import myAxios from 'lib/axios'
 
 interface Post {
   id: number
@@ -7,13 +9,15 @@ interface Post {
 }
 
 const fetchPosts = async (): Promise<Post[]> => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-  if (!response.ok) {
-    throw new Error('Network response was not ok')
-  }
-  return response.json()
+  const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts') // JSONPlaceholder API
+  return data
 }
 
 export const usePosts = () => {
-  return useQuery<Post[], Error>('posts', fetchPosts)
+  return useQuery<Post[], Error>({
+    queryKey: ['posts'],
+    queryFn: fetchPosts,
+    staleTime: 1000 * 60 * 5, // 5 daqiqa (cache uchun)
+    retry: 2, // Retry 2 marta agar xatolik bo‘lsa
+  })
 }
