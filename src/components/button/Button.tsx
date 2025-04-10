@@ -61,7 +61,8 @@ export default function Button({
   empty = false,
 }: IAddItemBtnProps): React.JSX.Element {
   const { t } = useTranslation()
-  const { isLoading } = useTypedSelector((s) => s.store)
+  // const { isLoading } = useTypedSelector((s) => s.store)
+  let isLoading = false
   const navigate = useNavigate()
 
   function handleClick(): void {

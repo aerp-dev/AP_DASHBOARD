@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 
 // Helpers
 import { historyParamsSet } from 'helpers'
-import { initialPagination } from 'pages/adminRoles/constants'
+// import { initialPagination } from 'pages/adminRoles/constants'
 
 // Components
 import { Button } from 'components'
@@ -18,6 +18,8 @@ interface IPaginationParams {
   getAllData: Function
   pagination: IPagination
 }
+
+const initialPagination: IPagination = { page: 1, limit: 10, total: 0, totalPages: 0 }
 
 export default function Pagination({ isChecked = false, pagination, getAllData }: IPaginationParams): React.JSX.Element {
   const { t } = useTranslation()

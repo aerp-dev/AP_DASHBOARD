@@ -11,7 +11,7 @@ import { ThemeType } from 'types'
 export interface IInitialState {
   isLoading: boolean
   isFullHeight: boolean
-  // user: USER UCHUN TYPE YOZASIZ
+  user: { name: string }
   // settings: ISettings
   // global: IErpConfig
   // sessionIsExpired: boolean
@@ -21,7 +21,7 @@ export interface IInitialState {
 const initialState: IInitialState = {
   isLoading: true,
   isFullHeight: false,
-  // user: {},
+  user: { name: '' },
   // sessionIsExpired: false,
   // isTechnicalWorksActive: false,
 }
@@ -40,7 +40,7 @@ const store = createSlice({
     userAuth: (state, action) => {
       switch (action?.payload?.type) {
         case 'LOGIN':
-          // state.user = {}
+          state.user = action?.payload?.data?.user
 
           Cookies?.set(TOKEN_COOKIE_NAME, action?.payload?.data?.access_token, { expires: 2 })
           redirect('/dashboard')

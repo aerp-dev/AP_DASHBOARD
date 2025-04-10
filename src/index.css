@@ -1,7 +1,4 @@
-@import "tailwindcss";
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@import 'tailwindcss';
 
 /* Disable the blue clicking effect */
 button,
@@ -28,4 +25,98 @@ div {
   scroll-behavior: smooth;
   scroll-padding: 100px;
   scroll-margin: 100px;
+}
+
+/* Loader */
+.loader_wrapper {
+  display: grid;
+  place-items: center;
+  height: auto;
+}
+.loader {
+  animation: spin 1s linear infinite;
+}
+body:has(.loader) {
+  cursor: wait !important;
+}
+.loader.small {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  border-width: 4px;
+  border-top-width: 4px;
+}
+.loader.verySmall {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+  border-top-width: 3px;
+}
+
+/* SCROLLBAR STYLES */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
+}
+
+.scrollbar-scroll::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--visualColorMain);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--visualColorThird);
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div:has(input[required]) > label::after {
+  content: '*';
+  color: rgba(248 113 113) !important;
+  margin-left: 2px;
+}
+
+/* Small scrolls */
+.small-scroll::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.very-small-scroll::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+/* Hiding scroll */
+.hide-scroll::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.animate-ease-fast {
+  transition: all 150ms ease-in-out;
+  will-change: auto;
+}
+.animate-ease {
+  transition: all 200ms ease-in-out;
+  will-change: auto;
 }

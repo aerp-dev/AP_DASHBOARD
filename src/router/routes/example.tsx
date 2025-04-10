@@ -10,7 +10,7 @@ import { EXAMPLE_PATH_NAMES } from 'router/routePathNames'
 import { getChildElement, getRedirect } from 'utils/routing'
 
 // Default admin routes
-export const CashRoutes = (): IRoutes[] => [
+export const ExampleRoutes = (): IRoutes[] => [
   { path: EXAMPLE_PATH_NAMES.BASE, element: <>Example</> },
 
   {

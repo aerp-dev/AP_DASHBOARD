@@ -44,3 +44,9 @@ export const ScrollToTop = lazy(() => import('./scrollToTop/ScrollToTop'))
 
 /** Coming soon component for blocing not actual or in process items */
 export const ComingSoon = lazy(() => import('./comingSoon/ComingSoon'))
+
+/** Navbar */
+export const Navbar = lazy(() => import('./navbar/Navbar'))
+
+/** GeneralInfo */
+export const GeneralInfo = lazy(() => import('./generalInfo/GeneralInfo'))

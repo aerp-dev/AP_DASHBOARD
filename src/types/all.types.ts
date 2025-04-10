@@ -22,3 +22,10 @@ export enum ThemeType {
   Light = 'light',
   System = 'system',
 }
+
+export interface IPagination {
+  page: number
+  limit: number
+  total: number
+  totalPages: number
+}
